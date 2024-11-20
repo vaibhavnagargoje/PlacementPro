@@ -1,0 +1,6 @@
+db.sqlite3
+/Home/__pycache__
+/home/migrations
+/Profile/__pycache__
+/Profile/migrations
+/PlacementPro/__pycache__
