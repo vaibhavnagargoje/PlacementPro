@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'Profile',
     'Companies',
     'tailwind',
-    'theme'
+    'theme',
+    'django_browser_reload',
 ]
 
 TAILWIND_APP_NAME = 'theme'
@@ -59,6 +60,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = 'PlacementPro.urls'
