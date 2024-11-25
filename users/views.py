@@ -26,4 +26,4 @@ def login_success(request):
 
 def custom_logout(request):
     logout(request)
-    request(request,'users/logout.html')
+    return render(request,'users/logout.html')
