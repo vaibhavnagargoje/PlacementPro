@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Login Successful
+{% endblock title %}
+
+{% block content %}
+
+<div class="max-w-md w-full bg-gray-800 p-8 rounded-lg shadow-md">
+    <div class="flex items-center justify-center mb-4">
+        <!-- SVG Checkmark -->
+        <svg class="w-16 h-16 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+    </div>
+
+    <h2 class="text-2xl font-bold mb-4 text-center text-white">Login Successful</h2>
+
+    <!-- Display messages -->
+    {% if messages %}
+        <div class="mb-4">
+            {% for message in messages %}
+                <div class="p-4 mb-2 bg-green-600 text-white rounded">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <p class="text-center text-white">You are now logged in. Redirecting to your profile...</p>
+
+    <!-- Meta refresh for automatic redirect -->
+    <meta http-equiv="refresh" content="1;url={% url 'index' %}" />
+
+</div>
+
+{% endblock %}

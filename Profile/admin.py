@@ -1,9 +1,11 @@
 from django.contrib import admin
 from .models import Profile
+from unfold.admin import ModelAdmin
+
 # Register your models here.
 
 @admin.register(Profile)
-class ProfileAdmin(admin.ModelAdmin):
+class ProfileAdmin(ModelAdmin):
     list_display = ['user_id','first_name','last_name','role']
     search_fields = ['user__username','user__first_name','user__last_name','user__email']
     list_filter = ['role','department']
