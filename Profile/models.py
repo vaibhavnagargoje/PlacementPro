@@ -1,6 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
-# Create your models here.
+from django.contrib.auth.models import AbstractUser
+
+# class User(AbstractUser):
+#     mobile_n = models.CharField(max_length=15)
+#     # Add custom fields if necessary
+# # Create your models here.
 
 class Profile(models.Model):
     ROLE_CHOICES = [

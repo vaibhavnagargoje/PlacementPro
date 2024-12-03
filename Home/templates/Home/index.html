@@ -2,6 +2,10 @@
 
 {% block content %}
 
+{% if user.is_authenticated%}
+{% else %}
+
+
 <style>
     .error-message {
         background-color: #fef2f2; /* Light red */
@@ -71,40 +75,25 @@
                     {% endfor %}
                 </div>
             {% endif %}
-            {% comment %} <div class="text-center text-white px-6">
-                <h1 class="md:text-4xl lg:text-5xl font-bold">Welcome to Interview Preparation Platform</h1>
-                <p class="mt-5 text-lg">Schedule your Interview right now</p>
-                <a class="mt-8 inline-block border-4 border-gray-600 px-6 py-3 rounded-lg hover:border-black hover:bg-orange-500" href="{% url 'book_now' %}">Book Now</a>
-            </div> {% endcomment %}
+        
+
+            
+
+
+
+
+            
         </div>
     </section>
 
     <!-- Main Content -->
     <main class="p-6 max-w-screen-2xl mx-auto">
         <!-- Card Section -->
-        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            <!-- Card 1 -->
-            <div class="bg-gray-800 text-center text-gray-100 shadow-md rounded-lg p-4 md:p-6 transition-transform transform hover:scale-105 hover:shadow-xl duration-300">
-                <h2 class="text-lg md:text-xl font-bold mb-2 md:mb-4">Explore Job Opportunities</h2>
-                <p class="mb-4 text-gray-300">Discover a wide range of job openings tailored to your skills and career aspirations. Browse job listings from top companies, apply directly through our platform, and take the next step towards your dream job.</p>
-                <a href="#" class="inline-block px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors duration-300">Explore Jobs</a>
-            </div>
-    
-            <!-- Card 2 -->
-            <div class="bg-gray-800 text-center text-gray-100 shadow-md rounded-lg p-4 md:p-6 transition-transform transform hover:scale-105 hover:shadow-xl duration-300">
-                <h2 class="text-lg md:text-xl font-bold mb-2 md:mb-4">Prepare with Mock Interviews</h2>
-                <p class="mb-4 text-gray-300">Boost your confidence and readiness with mock interviews conducted by industry experts. Schedule a session at your convenience, get personalized feedback, and improve your interview skills for real-world success.</p>
-                <a href="#" class="inline-block px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors duration-300">Book a Mock Interview</a>
-            </div>
-    
-            <!-- Card 3 -->
-            <div class="bg-gray-800 text-center text-gray-100 shadow-md rounded-lg p-4 md:p-6 transition-transform transform hover:scale-105 hover:shadow-xl duration-300">
-                <h2 class="text-lg md:text-xl font-bold mb-2 md:mb-4">Manage Interviews & Feedback</h2>
-                <p class="mb-4 text-gray-300 ">For interviewers, manage your schedule and provide constructive feedback to help candidates improve. Streamline the interview process and contribute to the success of aspiring professionals.</p>
-                <a href="#" class="inline-block px-4 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 transition-colors duration-300">Manage & Feedback</a>
-            </div>
-        </div>
+        
+
     </main>
 </div>
+
+{% endif %}
 
 {% endblock content %}

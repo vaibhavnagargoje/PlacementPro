@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     "unfold",
+    'unfold.contrib.import_export',
     # "unfold.contrib.forms",
     'django.contrib.admin',
     'django.contrib.auth',
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
     'Profile',
     'Companies',
     'users',
+    'import_export',
     'tailwind',
     'theme',
     'django_browser_reload',
@@ -158,7 +160,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-
+LOGIN_URL = '/users/login/'
 
 
 # # smtp mail settings
