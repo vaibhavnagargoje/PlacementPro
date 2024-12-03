@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.auth.models import AbstractUser
+from users.models import Batch
 
 # class User(AbstractUser):
 #     mobile_n = models.CharField(max_length=15)
@@ -20,6 +21,7 @@ class Profile(models.Model):
     ]
 
     user  = models.OneToOneField(User,on_delete=models.CASCADE,related_name='profile')
+    batch = models.ForeignKey(Batch,on_delete=models.SET_NULL,blank=True, null=True)
     role = models.CharField(max_length=20,choices=ROLE_CHOICES,default='Student')
     mobile_number = models.CharField(max_length=15,blank=True, null=True)
     department = models.CharField(max_length=50,choices=DepartmentChoices,blank=True)
@@ -37,4 +39,4 @@ class Profile(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f"{self.user.email} -  {self.role}"
+        return f"{self.user.email} -  {self.role} {self.batch.name if self.batch else 'No Batch'}"

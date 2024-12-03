@@ -8,8 +8,9 @@ from unfold.forms import UserChangeForm, UserCreationForm, AdminPasswordChangeFo
 from unfold.admin import ModelAdmin
 from unfold.contrib.import_export.forms import ExportForm, ImportForm, SelectableFieldsExportForm
 
+from.models import Batch
 
-from .filters import BatchFilter  # Import the custom filter from the filters.py
+from Profile.admin import BatchFilter
 
 # Unregister the default User admin
 admin.site.unregister(User)
@@ -29,19 +30,18 @@ class UserAdmin(BaseUserAdmin,ModelAdmin, ImportExportModelAdmin):
 
 
 
-
 # admin.py
 
-from django.contrib.auth.admin import GroupAdmin as BaseGroupAdmin
-from django.contrib.auth.models import User, Group
+# from django.contrib.auth.admin import GroupAdmin as BaseGroupAdmin
+# from django.contrib.auth.models import User, Group
 
-from unfold.admin import ModelAdmin
-
-
-admin.site.unregister(Group)
+# from unfold.admin import ModelAdmin
 
 
+# admin.site.unregister(Group)
 
-@admin.register(Group)
-class GroupAdmin(BaseGroupAdmin, ModelAdmin):
-    pass
+
+
+# @admin.register(Group)
+# class GroupAdmin(BaseGroupAdmin, ModelAdmin):
+#     pass
