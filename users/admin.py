@@ -30,18 +30,3 @@ class UserAdmin(BaseUserAdmin,ModelAdmin, ImportExportModelAdmin):
 
 
 
-# admin.py
-
-# from django.contrib.auth.admin import GroupAdmin as BaseGroupAdmin
-# from django.contrib.auth.models import User, Group
-
-# from unfold.admin import ModelAdmin
-
-
-# admin.site.unregister(Group)
-
-
-
-# @admin.register(Group)
-# class GroupAdmin(BaseGroupAdmin, ModelAdmin):
-#     pass

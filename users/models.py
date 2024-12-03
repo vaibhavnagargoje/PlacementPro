@@ -9,4 +9,4 @@ class Batch(models.Model):
     
 
     def __str__(self):
-        return f"{self.start_year}-{self.end_year}"
+        return f" {self.name} - {self.start_year}-{self.end_year}"
