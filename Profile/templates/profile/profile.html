@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto mt-8 text-white">
+    <!-- Profile Header -->
+    <div class="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6">
+        <!-- Profile Picture -->
+        <div class="flex-shrink-0">
+            <img src="{% static 'images/default-profile.png' %}" 
+                 alt="Profile Picture" 
+                 class="w-32 h-32 rounded-full object-cover shadow-lg">
+        </div>
+        <!-- User Details -->
+        <div class="flex-grow">
+            <h1 class="text-3xl font-bold text-orange-500">John Doe</h1>
+            <p class="text-gray-400 mt-2">johndoe@example.com</p>
+            <p class="text-gray-400">+123 456 7890</p>
+        </div>
+    </div>
+
+    <!-- Profile Details Section -->
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Personal Information -->
+        <div>
+            <h2 class="text-xl font-semibold text-orange-500">Personal Information</h2>
+            <ul class="mt-2 text-gray-300 space-y-2">
+                <li><strong>Full Name:</strong> John Doe</li>
+                <li><strong>Gender:</strong> Male</li>
+                <li><strong>Address:</strong> 123 Main Street, City, State</li>
+            </ul>
+        </div>
+        <!-- Academic Details -->
+        <div>
+            <h2 class="text-xl font-semibold text-orange-500">Academic Details</h2>
+            <ul class="mt-2 text-gray-300 space-y-2">
+                <li><strong>Batch:</strong> 2024</li>
+                <li><strong>Department:</strong> Computer Science</li>
+                <li><strong>CGPA:</strong> 8.5</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Placement Status -->
+    <div class="mt-6">
+        <h2 class="text-xl font-semibold text-orange-500">Placement Status</h2>
+        <ul class="mt-2 text-gray-300 space-y-2">
+            <li><strong>Status:</strong> <span class="text-green-400">Placed</span></li>
+            <li><strong>Company:</strong> ABC Tech</li>
+            <li><strong>Package:</strong> $50,000/annum</li>
+        </ul>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="mt-10 flex justify-between">
+        <button class="w-full md:w-1/2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-semibold transition mr-2">
+            Update Profile
+        </button>
+        <button class="w-full md:w-1/2 bg-gray-600 hover:bg-gray-700 px-6 py-3 rounded-lg font-semibold transition ml-2">
+            <a href="{% url 'change_password' %}" class="text-blue-500 hover:underline">
+                Change Password
+            </a>
+            
+        </button>
+    </div>
+</div>
+{% endblock %}

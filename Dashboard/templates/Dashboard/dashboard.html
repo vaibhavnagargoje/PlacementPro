@@ -1,5 +1,160 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock %}
+
 {% block content %}
+<div class="container mx-auto p-6">
+    <!-- Ongoing Drives Section -->
+    <div class="mb-6">
+        <h2 class="text-2xl font-semibold text-white bg-blue-600 py-2 px-4 rounded-lg shadow-md inline-block">
+            Ongoing Placement Drives
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
+            <!-- Card 1 -->
+            <div class="bg-white p-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out">
+                <div class="relative mb-8">
+                    <span class="absolute top-0 left-0 bg-blue-500 text-white px-3 py-1 text-sm rounded-tl-lg rounded-br-lg">
+                        Applied
+                    </span>
+                    <span class="absolute top-0 right-0 bg-gray-900 text-white px-2 py-1 text-sm rounded-tl-lg rounded-br-lg">
+                        5 Days Left
+                    </span>
+                </div>
+                <h2 class="text-xl font-semibold text-gray-800">ABC Tech</h2>
+                <p class="text-lg text-gray-600 mt-2">Software Engineer</p>
+                <p class="text-md text-gray-500 mt-2">Package: $60,000/year</p>
+                <p class="text-md text-gray-500 mt-2">Students Placed: 30</p>
+                <div class="mt-4 flex justify-between items-center">
+                    <span class="text-sm text-gray-500">Applied: Yes</span>
+                    <a href="#" class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition-all duration-300">Apply</a>
+                </div>
+            </div>
 
+            <!-- Card 2 -->
+            <div class="bg-white p-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out">
+                <div class="relative mb-8">
+                    <span class="absolute top-0 left-0 bg-red-500 text-white px-3 py-1 text-sm rounded-tl-lg rounded-br-lg">
+                        Not Applied
+                    </span>
+                    <span class="absolute top-0 right-0 bg-gray-900 text-white px-2 py-1 text-sm rounded-tl-lg rounded-br-lg">
+                        12 Days Left
+                    </span>
+                </div>
+                <h2 class="text-xl font-semibold text-gray-800">XYZ Corp</h2>
+                <p class="text-lg text-gray-600 mt-2">Data Scientist</p>
+                <p class="text-md text-gray-500 mt-2">Package: $80,000/year</p>
+                <p class="text-md text-gray-500 mt-2">Students Placed: 10</p>
+                <div class="mt-4 flex justify-between items-center">
+                    <span class="text-sm text-gray-500">Applied: No</span>
+                    <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-all duration-300">Apply</a>
+                </div>
+            </div>
 
+            <!-- Card 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out">
+                <div class="relative mb-4">
+                    <span class="absolute top-0 left-0 bg-green-500 text-white px-3 py-1 text-sm rounded-tl-lg rounded-br-lg">
+                        Applied
+                    </span>
+                    <span class="absolute top-0 right-0 bg-gray-900 text-white px-2 py-1 text-sm rounded-tl-lg rounded-br-lg">
+                        3 Days Left
+                    </span>
+                </div>
+                <h2 class="text-xl font-semibold text-gray-800">TechGiant Inc.</h2>
+                <p class="text-lg text-gray-600 mt-2">Product Manager</p>
+                <p class="text-md text-gray-500 mt-2">Package: $100,000/year</p>
+                <p class="text-md text-gray-500 mt-2">Students Placed: 15</p>
+                <div class="mt-4 flex justify-between items-center">
+                    <span class="text-sm text-gray-500">Applied: Yes</span>
+                    <a href="#" class="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition-all duration-300">Apply</a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out">
+                <div class="relative mb-4">
+                    <span class="absolute top-0 left-0 bg-yellow-500 text-white px-3 py-1 text-sm rounded-tl-lg rounded-br-lg">
+                        Not Applied
+                    </span>
+                    <span class="absolute top-0 right-0 bg-gray-900 text-white px-2 py-1 text-sm rounded-tl-lg rounded-br-lg">
+                        7 Days Left
+                    </span>
+                </div>
+                <h2 class="text-xl font-semibold text-gray-800">FutureTech</h2>
+                <p class="text-lg text-gray-600 mt-2">UX/UI Designer</p>
+                <p class="text-md text-gray-500 mt-2">Package: $55,000/year</p>
+                <p class="text-md text-gray-500 mt-2">Students Placed: 5</p>
+                <div class="mt-4 flex justify-between items-center">
+                    <span class="text-sm text-gray-500">Applied: No</span>
+                    <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-all duration-300">Apply</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Horizontal Line -->
+    <hr class="my-6 border-t-2 border-gray-300">
+
+    <!-- Previous Drives Section -->
+    <div class="mb-6">
+        <h2 class="text-2xl font-semibold text-white bg-gray-600 py-2 px-4 rounded-lg shadow-md inline-block mt-6">
+            Previous Placement Drives
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
+            <!-- Card 1 -->
+            <!-- Previous Drive Card -->
+<div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out">
+    <div class="relative mb-4">
+        <!-- Top Right Corner - Placed Students -->
+        <span class="absolute top-0 right-0 bg-green-500 text-white px-3 py-1 text-sm rounded-tl-lg rounded-br-lg">
+            Placed: 25
+        </span>
+    </div>
+    <h2 class="text-xl font-semibold text-gray-800">XYZ Corp</h2>
+    <p class="text-lg text-gray-600 mt-2">Business Analyst</p>
+    <p class="text-md text-gray-500 mt-2">Package: $55,000/year</p>
+    <p class="text-md text-gray-500 mt-2">Students Placed: 25</p>
+    <div class="mt-4 flex justify-between items-center">
+        <span class="text-sm text-gray-500">Applied: Yes</span>
+        <a href="#" class="bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600 transition-all duration-300">View Details</a>
+    </div>
+</div>
+
+            <!-- Card 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out">
+                <h2 class="text-xl font-semibold text-gray-800">DataCorp</h2>
+                <p class="text-lg text-gray-600 mt-2">Business Analyst</p>
+                <p class="text-md text-gray-500 mt-2">Package: $75,000/year</p>
+                <p class="text-md text-gray-500 mt-2">Students Placed: 20</p>
+                <div class="mt-4 flex justify-between items-center">
+                    <span class="text-sm text-gray-500">Applied: No</span>
+                    <a href="#" class="bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600 transition-all duration-300">View Details</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out">
+                <h2 class="text-xl font-semibold text-gray-800">TechExperts</h2>
+                <p class="text-lg text-gray-600 mt-2">Full Stack Developer</p>
+                <p class="text-md text-gray-500 mt-2">Package: $85,000/year</p>
+                <p class="text-md text-gray-500 mt-2">Students Placed: 10</p>
+                <div class="mt-4 flex justify-between items-center">
+                    <span class="text-sm text-gray-500">Applied: Yes</span>
+                    <a href="#" class="bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600 transition-all duration-300">View Details</a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out">
+                <h2 class="text-xl font-semibold text-gray-800">DesignPro</h2>
+                <p class="text-lg text-gray-600 mt-2">UX Researcher</p>
+                <p class="text-md text-gray-500 mt-2">Package: $65,000/year</p>
+                <p class="text-md text-gray-500 mt-2">Students Placed: 12</p>
+                <div class="mt-4 flex justify-between items-center">
+                    <span class="text-sm text-gray-500">Applied: No</span>
+                    <a href="#" class="bg-gray-500 text-white py-2 px-4 rounded-lg hover:bg-gray-600 transition-all duration-300">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

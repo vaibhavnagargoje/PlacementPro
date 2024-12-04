@@ -8,25 +8,13 @@ from users.models import Batch
 
 
 
-# Register your models here.
-from datetime import date
-from django.contrib.admin import SimpleListFilter
 
 
 from datetime import date
 from django.contrib.admin import SimpleListFilter
 from .models import Batch
-from datetime import date
-from django.contrib.admin import SimpleListFilter
-from .models import Batch
 
-from datetime import date
-from django.contrib.admin import SimpleListFilter
-from .models import Batch
 
-from datetime import date
-from django.contrib.admin import SimpleListFilter
-from .models import Batch
 
 class BatchFilter(SimpleListFilter):
     title = 'Batch'
@@ -99,3 +87,4 @@ class ProfileAdmin(ModelAdmin):
     def email(self, obj):
         return obj.user.email
     email.short_description = 'Email'
+
